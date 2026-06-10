@@ -41,7 +41,6 @@ export default function Home() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [hoveredGame, setHoveredGame] = useState<Game | null>(null);
   const [loading, setLoading] = useState(true);
   
   // Favoritos locais
@@ -225,70 +224,6 @@ export default function Home() {
         ) : (
           <div className="w-full max-w-7xl grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-9 gap-3 auto-rows-max relative">
             
-            {/* PAINEL CENTRAL (ESTILO FRIV) - Ocupa 3 colunas e 3 linhas no meio/topo em telas grandes */}
-            <div className="col-span-full md:col-span-3 md:row-span-3 lg:col-span-4 lg:row-span-3 bg-gradient-to-b from-[#180d35]/90 to-[#0e0722]/95 border-2 border-purple-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-[0_0_30px_rgba(139,92,246,0.15)] min-h-[260px] md:min-h-[320px] transition-all duration-300">
-              {hoveredGame ? (
-                <div className="flex flex-col h-full justify-between animate-fadeIn">
-                  <div className="flex gap-4">
-                    <div className="relative w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden border border-purple-500/40">
-                      <Image
-                        src={hoveredGame.imageUrl}
-                        alt={hoveredGame.title}
-                        fill
-                        sizes="96px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <span className="text-xs uppercase bg-purple-900/60 border border-purple-700/50 rounded-full px-2.5 py-0.5 font-bold text-cyan-400">
-                        {hoveredGame.category.name}
-                      </span>
-                      <h3 className="text-xl font-bold text-white mt-1 leading-tight line-clamp-1">
-                        {hoveredGame.title}
-                      </h3>
-                      <p className="text-purple-300 text-xs mt-1 line-clamp-3 leading-relaxed">
-                        {hoveredGame.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="mt-4 flex items-center justify-between gap-4">
-                    <div className="text-purple-300/80 text-xs flex flex-col">
-                      <span>👁️ {hoveredGame.views} jogadas</span>
-                      <span className="text-cyan-400/80 font-semibold">{hoveredGame.gameType}</span>
-                    </div>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={(e) => toggleFavorite(hoveredGame.id, e)}
-                        className="p-3 rounded-xl bg-slate-900 border border-purple-800 text-base hover:bg-slate-800 hover:text-red-500 transition-colors"
-                        title={favorites.includes(hoveredGame.id) ? "Remover dos favoritos" : "Adicionar aos favoritos"}
-                      >
-                        {favorites.includes(hoveredGame.id) ? "❤️" : "🤍"}
-                      </button>
-                      <Link
-                        href={`/jogo/${hoveredGame.slug}`}
-                        className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl font-bold text-white text-sm shadow-[0_0_15px_rgba(236,72,153,0.4)] hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] hover:scale-[1.03] transition-all flex items-center gap-2"
-                      >
-                        JOGAR AGORA 🎮
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center h-full text-center py-6">
-                  {/* LOGO CENTRADO */}
-                  <div className="relative w-20 h-20 bg-gradient-to-tr from-pink-500 via-purple-600 to-cyan-500 rounded-2xl flex items-center justify-center font-extrabold text-4xl shadow-[0_0_30px_rgba(236,72,153,0.4)] animate-bounce duration-1000 mb-4">
-                    GR
-                  </div>
-                  <h2 className="text-2xl font-black bg-gradient-to-r from-pink-400 via-purple-300 to-cyan-300 bg-clip-text text-transparent">
-                    GRIV JOGOS
-                  </h2>
-                  <p className="text-purple-300/70 text-xs mt-2 max-w-xs leading-relaxed">
-                    Passe o mouse sobre os jogos ao redor para ver os detalhes e começar a jogar!
-                  </p>
-                </div>
-              )}
-            </div>
-
             {/* ITENS DE JOGO (MOSAICO) */}
             {filteredGames.map((game, index) => {
               const glowClass = borderGlowClasses[index % borderGlowClasses.length];
@@ -298,7 +233,6 @@ export default function Home() {
                 <Link
                   key={game.id}
                   href={`/jogo/${game.slug}`}
-                  onMouseEnter={() => setHoveredGame(game)}
                   className={`relative aspect-square w-full rounded-xl overflow-hidden border-2 bg-slate-950/80 game-cell-hover cursor-pointer shadow-lg flex items-center justify-center group ${glowClass}`}
                 >
                   {/* Ícone de favorito no canto superior */}
