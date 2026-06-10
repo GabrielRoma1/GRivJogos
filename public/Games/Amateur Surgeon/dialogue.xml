@@ -1,0 +1,3307 @@
+<dialogue>
+	<id>
+		<reference>1</reference>
+                <bg>sidestreet</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>bleedrunover</character3>
+		<character4>probenorm</character4>
+	
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Oh my God! I've killed a dead hobo!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bleedrunover</expression>
+                    <speech>BLEED: I'm not dead! Argh... Quickly - you have to cut me open!</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Uh... I've got a pizza cutter!</speech>
+                </convo>
+
+        </id>
+	<id>
+		<reference>2</reference>
+                <bg>warehouse</bg>
+                <character1>probenorm</character1>
+		<character2>false</character2>                
+		<character3>false</character3>
+		<character4>Bleed</character4>
+	
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Who are you?</speech>
+                </convo>
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: My name is Ignacious Bleed.</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Can you teach me that - how to do surgery?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Teach surgery? I...I couldn't. Not again...</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Why not? I've got a bunch more tools in the van.  And if that pool table over there doesn't scream operation, I don't know what does!</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: And who would want to be operated on by a washed-up old tramp and a pizza boy?</speech>
+                </convo>
+
+
+
+
+<convo>
+                    <clipnumber>0</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>*CRASH!!*</speech>
+                </convo>
+	
+        </id>
+	<id>
+		<reference>3</reference>
+                <bg>warehouse</bg>
+                <character1>gracefuls</character1>
+		<character2>Bleed</character2>                
+		<character3>false</character3>
+		<character4>Probenorm</character4>
+	
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>gracefulsfallen</expression>
+                    <speech>TOMMY: Urrrr...</speech>
+                </convo>
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Hello mister burglar! Fall through the window trying to rob our clinic? </speech>
+                </convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>gracefulsfallen</expression>
+                    <speech>TOMMY: C...clinic?</speech>
+		</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Yep! You're in luck - today's special is glass-extraction!</speech>
+                </convo>
+
+
+
+        </id>
+	<id>
+		<reference>4</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>probenorm</character3>
+		<character4>gracefulbandage</character4>
+	
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>gracefulbandage</expression>
+                    <speech>TOMMY: Urgh...wow. Hey - do I recognize you?</speech>
+                </convo>
+		
+
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: Me? No no...I'm sure you couldn't!</speech>
+                </convo>		
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>gracefulbandage</expression>
+                    <speech>TOMMY: There was a doctor got himself into a heap of trouble a few years back...lotsa unexplained deaths.</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>gracefulbandage</expression>
+                    <speech>TOMMY: Then he just disappeared...</speech>
+                </convo>
+
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>Bleed: Thank you! Come again!</speech>
+                </convo>
+
+
+
+        </id>
+	<id>
+		<reference>5</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>
+norm</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Hmm. So, was it true what he said? You're a doctor?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: No! I mean, I used to...</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Can you teach me how to cut - I mean, help people?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alright, Alan. But we may have to improvise with the tools a little...</speech>
+                </convo>
+
+        </id>
+	<id>
+		<reference>6</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>cletus</character3>
+		<character4>Probenorm</character4>
+	
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Cletus</expression>
+                    <speech>CLETUS: Hay, can yew guys help out a friend?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Whoa! That porcupine has a hillbilly stuck on its ass!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Cletus</expression>
+                    <speech>CLETUS: I went to, uh, pick-up this here prickle-pig, but done fell on it instead.</speech>
+                </convo>
+
+
+        </id>
+	<id>
+		<reference>7</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Cletusplastered</character4>
+	
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Cletusplastered</expression>
+                    <speech>CLETUS: Hay! That was pretty good! Thanks kindly!</speech>
+                </convo>
+
+
+        </id>
+<id>
+		<reference>8</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: So are you really the renegade doctor that burglar was talking about before?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan, you have some real talent. I will continue to train you if it's what you want...</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: It's what I've ALWAYS wanted!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: But I will only do so on the condition that we do not talk about my past! It is uneventful and uninteresting, I assure you!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: Ok! You're the boss...doc!</speech>
+                </convo>
+
+        </id>
+	<id>
+		<reference>9</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>claudstopdrinking</character3>
+		<character4>Probenorm</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Clauddrinkingpaint</expression>
+                    <speech>CLAUDE: I heard you boys were surgeons of a kind... *Glug-glug-glug*</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenormal</expression>
+                    <speech>PROBE: Hello...Are you drinking PAINT?!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>claudstopdrinking</expression>
+                    <speech>CLAUDE: Doesn't say I shouldn't on the can! And that means a big fat payout from the paint company! Same goes for the nailgun maker who didn't mention I shouldn't shoot myself in the chest!</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>probenorm</expression>
+                    <speech>PROBE: One de-nailing coming up!</speech>
+                </convo>
+
+        </id>
+	<id>
+		<reference>10</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>claudstopdrinking</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>claudstopdrinking</expression>
+                    <speech>CLAUDE: You guys are OK. Here - take my chainsaw as a thank you! I'm sure a pair of makeshift surgeons such as yourselves could use it! </speech>
+                </convo>
+
+
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Sweet! Hey doc, you have anything you need amputating? Rrrm-rrrm!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: (Sigh...) </speech>
+                </convo>
+
+
+        </id>
+	
+	<id>
+		<reference>12</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>trenchcoat1</character3>
+		<character4>Probenormal</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>trenchcoat1</expression>
+                    <speech>TRENT: Doctors! You gotta help! I was down at the bank, robbing... Uh, I mean, making a deposit... And I slipped and fell on some bullets!</speech>               
+</convo>
+
+
+
+        </id>
+		<id>
+		<reference>13</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Trenchcoat</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>trenchcoat1</expression>
+                    <speech>TRENT: You guys are great! The only hospital round here closed down a few years ago. Some nasty stuff went down there...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Well, don't let us keep you!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>trenchcoat2</expression>
+                    <speech>TRENT: Right! Thanks again! I'll spread the word about you guys!</speech>               
+</convo>
+
+
+
+        </id>
+	
+	<id>
+		<reference>15</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Junkystanding</character3>
+		<character4>Probenormal</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: I'm Gus, but folks call me "Guts." I run the junkyard downtown - body disposals and whatnot...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenormal</expression>
+                    <speech>PROBE: Car bodies? Or...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Never mind!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkysstanding</expression>
+                    <speech>GUTS: I feel terrible! I can't eats no more!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkysitting</expression>
+                    <speech>GUTS: Glaaaargh!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: See what I means?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: Can you guys take a look-see?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: (shudder)</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>16</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>junkystanding</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: Ahhh... Dat's better! And there's nuttin' like a good clear-out to work up an appetite! T'anks, fellas!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Well, that was disgusting! Goodbye now, Guts!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>18</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>lumbar</character3>
+		<character4>Probenormal</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>lumbar</expression>
+                    <speech>JACK: My nickname's "Lumbar" Jack. Partly because of my profession, but mainly because of my back, eh? It pains me something fearsome!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenormal</expression>
+                    <speech>PROBE: Nurse! Anesthetic please!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: I'm not your nurse, Alan!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>19</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Lumbaruprighthappy</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>lumbar</expression>
+                    <speech>JACK: That feels...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>lumbaruprighthappy</expression>
+                    <speech>JACK: *CRACK!*</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>lumbaruprighthappy</expression>
+                    <speech>JACK: Oh yes! Ooh, I'll be back to wrestlin' bears and violating forests in no time!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Right...well! Don't get the two confused! Have fun now!</speech>               
+</convo>
+
+
+
+
+
+        </id>
+	
+	<id>
+		<reference>21</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Eddythedog1</character3>
+		<character4>Probenormal</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Eddythedog1</expression>
+                    <speech>EDDY: *sniff sniff* Are you the vet? I mean, surgeon?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Eddythedog1</expression>
+                    <speech>EDDY: I'm Eddy the Dog. Know why they call me that?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probethink</expression>
+                    <speech>PROBE: You clean yourself with your tongue?</speech>               
+</convo>
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Eddythedog2</expression>
+                    <speech>EDDY: What? No! *growl*</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Eddythedog1</expression>
+                    <speech>EDDY: I'm full of tracking chips and the police make me wear this collar!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenormal</expression>
+                    <speech>PROBE: We can remove those for you. Up on the table!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Eddythedog1</expression>
+                    <speech>EDDY: I'm allowed on the furniture? Sweet!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>22</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>eddynocollar</character4>
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>eddynocollar</expression>
+                    <speech>EDDY: Oh man, thanks! You know, have you guys ever considered going upscale? Maybe moving to the city? </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Oh no! I much prefer the quiet life!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: But doc, think what we could do! There'd be loads more interesting stuff in the city! </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: I said no, Alan!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>23</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: I still need more practice! Wouldn't moving to the city-</speech>               
+</convo>
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan - you are a very talented young man. In fact, you remind me of a student I once had...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Really? You mentioned a student before! What happened to him?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probehappy</expression>
+                    <speech>PROBE: ...or was it a HER?!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: Never mind! Listen to me Alan - you said you wanted my help. Fine. I will help you.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: But all I want is a quiet life! Here! Out of the way! Is that clear?</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>24</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Meatsacknorm</character3>
+		<character4>Probenormal</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Meatsacknorm</expression>
+                    <speech>MEATSACK: 'Ullo lads! I've come into some right nice organs recently.</speech>               
+</convo>
+
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Meatsacknorm</expression>
+                    <speech>MEATSACK: Seeing as me own heart's a bit rickety, I was hoping you could do me some swaps, like?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Meatsacknorm</expression>
+                    <speech>MEATSACK: In return, I'll see you get all the juicy organs a budding young surgeon could need!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>meatsackoffersorgan</expression>
+                    <speech>MEATSACK: Look at the tubes on that! Glistening, they are!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Let's do it!</speech>               
+</convo>
+
+
+
+        </id>
+		<id>
+		<reference>25</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>meatsacknorm</character4>
+	
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Meatsack</expression>
+                    <speech>MEATSACK: Nice jobs lads! Tell me though, a place like this is hardly fitting for chaps like you, is it?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Meatsack</expression>
+                    <speech>MEATSACK: There's plenty of work in the city! Haven't you heard?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Meatsack</expression>
+                    <speech>MEATSACK: Some nutjob has started running around maiming folk! Terrible, it is!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>26</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Doc, did you hear what that guy said? The city needs us!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: I don't want to be a pizza boy forever!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: And one day I want to have my own surgery! For real! Please...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: And what about you! Surely you must want something better for yourself!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I need to think. I'm going for a walk.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenormal</expression>
+                    <speech>PROBE: Hey! Wait...doc...</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>27</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>false</character3>
+		<character4>Probenormal</character4>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probethink</expression>
+                    <speech>PROBE: Man, I can't believe the doc left me on my own. What if some utter headcase comes in? I-</speech>               
+</convo>
+	
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Horrace3</expression>
+                    <speech>HORRACE: Bonsoir. I am Horrace.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Horrace1</expression>
+                    <speech>HORRACE: You are the pizza boy who operates with a spoon?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Pizza cutter, actually.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Horrace4</expression>
+                    <speech>HORRACE: Take up your spoon, child! I will be most interested to see what you find within me!</speech>               
+</convo>
+
+
+
+        </id>
+<id>
+		<reference>28</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Horrace1</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: You were full of weird bugs but I killed them all.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Horrace2</expression>
+                    <speech>HORRACE: Did you know the brighter and more beautiful the creature, the more extravagant and excruciating its poison?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: OK! Well that's great! Off you go now!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>29</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>probenorm</character3>
+		<character4>false</character4>
+	
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>aureola1</expression>
+                    <speech>GIRL: Hey you! I'm looking for someone!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probehappy</expression>
+                    <speech>PROBE: (She's hot!)</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Listen, whoever it is you're looking for, I think it might be me!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>aureolamad</expression>
+                    <speech>GIRL: Euch.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>aureola1</expression>
+                    <speech>GIRL: I wanted the...surgeon. Goodbye.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Hey wait! Wait!</speech>
+                </convo>
+
+
+        </id>
+	<id>
+		<reference>30</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>probenorm</character3>
+		<character4>false</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Argh! This stupid uniform! How can anyone recognize me as a master surgeon when I'm wearing this thing?</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Man, where's the doc gotten to? I hope he's not gone off on another cough syrup bender and walked out in front of a car again...</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan, I've been thinking... We should go to the city.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Ha! Great! You know, this just my day for good news! There was a really beautiful girl here just now. She was looking for "the surgeon". Ha!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE:  Guess she didn't realize she'd found him! Woo!</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: A girl? Goodness... No, it couldn't be... </speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Never mind! Let's get this show on the road! </speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Big city, get ready for the Alan Probing of a lifetime!</speech>
+                </convo>
+
+
+        </id>
+	<id>
+		<reference>32</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+	
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: "Probe and Bleed, Back Alley MDs" - got a nice ring to it, eh doc?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Never mind that. Someone is coming - this could be trouble!</speech>
+                </convo>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Brutalitychatty</expression>
+                    <speech>BRUTALITY: All right! Who's the graffiti artist 'round here? Speak up, maggots!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Uh, I'm Alan Probe, I'm a surgeon, and this is...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Brutality</expression>
+                    <speech>BRUTALITY: Surgeons, eh? Well! You boys are gonna help me! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Ok...what's - </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Brutalityradge</expression>
+                    <speech>BRUTALITY: No questions! Get to fixin'!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>33</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Brutality</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Brutality</expression>
+                    <speech>BRUTALITY: Hoo! That's better. Don't know why I did that. People I arrested just kept suggesting it. Guess I got curious.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Well, as long as you're happy, sir!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Brutality</expression>
+                    <speech>BRUTALITY: Some whack-job round here has started attacking criminals and messin' them up real bad... So carry on, and keep an eye out!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Brutality</expression>
+                    <speech>BRUTALITY: ...you can keep the handcuffs.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Ewwwww...</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>34</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Petroleumnorm</character3>
+		<character4>Probenorm</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Petroleumnorm</expression>
+                    <speech>VINCE: You guys are surgeons? I just got attacked! </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Petroleumnorm</expression>
+                    <speech>VINCE: I was just minding my own business, siphoning off some petrol from a car, when someone snuck up behind me!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Petroleumflamey</expression>
+                    <speech>VINCE: BAAAAAAARP! </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Cool! Well, let's take a look!</speech>               
+</convo>
+
+
+
+
+        </id>
+	<id>
+		<reference>35</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenormal</character3>
+		<character4>petroleumnorm</character4>
+	
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>petroleumnorm</expression>
+                    <speech>VINCE: Whew. Thanks guys - that was ace.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: No problem! Spread the word!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>36</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Bleed</character4>
+	
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan, I've been thinking... Your current outfit isn't really suitable any more, so I grabbed this as we left the warehouse.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probejumping</expression>
+                    <speech>PROBE: Look at me! I'm a super-hot surgeon!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Thanks doc! All the ladies are going to be saying, "Help me doctor! I have acute angina!" and I'll be all, "Hmm! I'd best take a look!" and...</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedangry</expression>
+                    <speech>BLEED: Alan! Could we focus, please! I think we have another patient!</speech>
+                </convo>
+
+
+        </id>
+	<id>
+		<reference>37</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>valerie</character3>
+		<character4>Probeteeth</character4>
+	
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Valerieevil</expression>
+                    <speech>VALERIE: Hey! Pipsqueak! Yeah, you in the overalls hanging out with the tramp!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: What a bit- I mean... How can we help you, sir?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Valerieevil</expression>
+                    <speech>VALERIE: SIR?! You little...!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Oh... OH! I am so, so sorry! I thought you were a dude dressed up like a cheap hooker. Sorry!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Valerie</expression>
+                    <speech>VALERIE: I guess I asked for that. Listen, I suffer from multiple personalities, which is bad for business... </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Valerie</expression>
+                    <speech>VALERIE: Could you... You know, fix me?</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>38</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>valstitches</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>valstitches</expression>
+                    <speech>VALERIE: I feel...good.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: (Urgh, well you don't look so good!)</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: So long, pretty lady!</speech>               
+</convo>
+
+
+        </id>
+		<id>
+		<reference>39</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>edgar1</character3>
+		<character4>Probeteeth</character4>
+	
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>edgar1</expression>
+                    <speech>EDGAR: Listen lads, I've heard there's some nutter going round attacking criminals.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>edgar1</expression>
+                    <speech>EDGAR: Now, I'm not an out-an-out criminal as such, but I don't want to take a chance!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: How can we he- </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>edgar1</expression>
+                    <speech>EDGAR: Glad you asked! I want you to fill me so chock-full of steroids that anyone thinking about messing with me is gonna regret it!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>40</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>edgar1</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Edgar2</expression>
+                    <speech>EDGAR: Hoo yeah! Feelin' pretty brutal!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: You're really worried about being attacked?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Edgar1</expression>
+                    <speech>EDGAR: Hey, there's some pretty bad stuff been going around last couple of weeks!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Edgar2</expression>
+                    <speech>EDGAR: But I should leave you gents in peace. Thanks for your help! Stay safe!</speech>               
+</convo>
+
+
+
+
+
+        </id>
+	<id>
+		<reference>41</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Donny3</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: Gentlemen, gentlemen! Allow me to introduce myself: I am Donny Debonair - Pimp Extraordinaire!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Funky!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: Damn straight! And these two are my number one girls!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: Gimme some sugar, ladies!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny2</expression>
+                    <speech>DONNY: Mmmm-hmmm!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny1</expression>
+                    <speech>DONNY: Ah yeah!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: Anyway, to business! I want you two fine surgeons to bling-bling my internal organs! That's right baby!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: In return, I'll throw in some time with one of my ladies here!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: (shudder) Uh - I tell you what, let's worry about the details later!</speech>               
+</convo>
+
+        </id>
+	<id>
+		<reference>42</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Donny3</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: Ooo-hooo! I'm feeling percentages more pimp! PERCENTAGES! I feel it, baby!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: So, have you heard anything about criminals getting attacked?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Donny3</expression>
+                    <speech>DONNY: Hmm. Word is, problems started around the same time some creepy French dude started hanging around...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: French? Hmm...</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>43</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>dumpster</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>dumpster</expression>
+                    <speech>JOE: Uh... Guys? Will you help me?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I think we should be able to... Whew! What did you do, eat a bunch of garbage and then sleep in a dumpster?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>dumpster</expression>
+                    <speech>JOE: Yeah... I guess, pretty much. Sorry. Listen - it's Ted... He needs to move out.</speech>               
+</convo>
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE:... </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>dmpsterpained</expression>
+                    <speech>JOE: Uh, Ted's my tapeworm.</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>44</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>dumpsterwithworm</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Dumpsterwithworm</expression>
+                    <speech>JOE: Oh man... Ted! What have I done? Oh man...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Hey! He was a giant, gross parasite who was slowly killing you! What are you upset about!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Dumpsterwithworm</expression>
+                    <speech>JOE: Yeah. But... He was my only friend.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenormaloveralls</expression>
+                    <speech>PROBE: Huh. Well, I guess they say it's those closest to our hearts that can hurt us the most...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I don't think they meant it in a strictly anatomical sense, Alan...</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>45</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>bugeater</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeater</expression>
+                    <speech>PETER: Surgeons! You have to help! I've been poisoned!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Poisoned? I knew it! Did someone attack you? WHAT THE HECK IS THAT?!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeater</expression>
+                    <speech>PETER: Oh, you mean Mister Caruthers? He is my pet komodo dragon and my good friend!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeater</expression>
+                    <speech>PETER: Today he would not eat his caviar, so I said "Mister Caruthers! You must eat your caviar! Look! It is delicious - nom nom nom!"</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeater</expression>
+                    <speech>PETER: And I ate some to show him, but someone had swapped it for spider eggs! Now I am going to die... Of spiders!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Ok! We'll do what we can!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>46</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>bugeater</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>bugeater</expression>
+                    <speech>PETER: That was very scary! Thank you both!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: You know doc, I've seen something similar to that before!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Back at the warehouse a guy came in full of bugs! He almost seemed to like it! I fixed him, but...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: You performed surgery without me? Alan! That was madness!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: No, it's fine! I did great, but... Oh never mind.</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>47</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Karl</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Karl</expression>
+                    <speech>KARL: Hey guys! Guys! You gotta help me, see? I was at customs, ok? Customs! Coming back from the coffee capital of the world oh man you should have seen all the coffees they had!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Karl</expression>
+                    <speech>KARL: But I had too much coffee they said! TOO MUCH! I said I'll tell YOU when I've had enough!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Karl</expression>
+                    <speech>KARL: I had to hide it! Had to! I have to have that sweet, sweet caffeine kick!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Karldrink</expression>
+                    <speech>KARL: slurp-slurp-slurp</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Karl</expression>
+                    <speech>KARL: Oh baby! Oh boy that's good! But anyway! Shut up! I'm talking! The coffee - I hid it! Now I need it back!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Karl</expression>
+                    <speech>KARL: You gotta get it back for me! Do your surgeon thing! Do it do it! Make with the ol' slice and dice, the old snip-snip chop-chop! </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Ohhh-kay! And breathe!</speech>               
+</convo>
+
+        </id>
+	<id>
+		<reference>48</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Karl</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Karl</expression>
+                    <speech>KARL: Oh wowee, oh yowza! You got it! Oh I could kiss you! I could kiss the coffee, that sweet, sweet mocha temptress...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Karldrink</expression>
+                    <speech>KARL: slurp-slurp-slurp</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: You're welcome!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>49</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>animalnorm</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>animalnorm</expression>
+                    <speech>ANIMAL: Hey you there. I'm sick. Ate something that disagreed with me.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Was it fast food?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>animalscratch</expression>
+                    <speech>ANIMAL: Not especially. I caught him while I was wearing my straitjacket after all! HAR HAR HAR!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: (Let's get him on the table and get him the heck out of here!)</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: (Agreed!) </speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>50</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Animal</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>animalclosedmouth</expression>
+                    <speech>ANIMAL: I recognize you, Dr. Bleed.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I... Me? How...?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>animalclosedmouth</expression>
+                    <speech>ANIMAL: I saw you. Saw you when I was in the Old Hospital. All those people died...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Doc? What's he talking about?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>animalscratch</expression>
+                    <speech>ANIMAL: You were the bedpan fairy!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>animalscratch</expression>
+                    <speech>ANIMAL: Dance, fairy! Dance your pixie dance for me again! HAR HAR HAR! WOOOOOO! HAR HAR!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: (The Old Hospital? Is it true... Or is he just crazy?)</speech>               
+</convo>
+
+        </id>
+	<id>
+		<reference>51</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenormaloveralls</expression>
+                    <speech>PROBE: Doc... What that guy said. Did you work at the Old Hospital? I heard about that. It shut down because a bunch of people died...</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan... </speech>
+                </convo>
+	
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I want to know what's happened, doc - but it'll have to wait. We've got a patient!</speech>
+                </convo>
+
+
+        </id>
+	<id>
+		<reference>52</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Eddynokidney</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Hey! You're... Eddy?!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Eddynokidney</expression>
+                    <speech>EDDY: Doc...help me! They... Someone set a dog on me! I...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: He's in a bad way! We need to get going!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>53</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: He'll pull through. But that was attempted murder!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: who's doing this? And what happened at the Old Hospital? What happend with YOU?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I... I will explain what I can, Alan. But for now... It looks like we have another patient.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Ahhhh! Doc, you can't leave me hanging like this! I want to know now!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>54</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Eddythedog1</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Trenchcoat1</expression>
+                    <speech>TRENT: Guys...*gack*... I was just walking along, minding my own business, and suddenly some girl stabbed me!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Trenchstabbed</expression>
+                    <speech>TRENT: Look! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Why are you naked!? </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan, whatever happened, those wounds are deep! We need to operate!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>55</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>false</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>aureolamad</expression>
+                    <speech>GIRL: Where is he? I will kill him!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: You're the girl from the warehouse! What...were YOU following Trent?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>aureolawellangry</expression>
+                    <speech>GIRL: You're the ones who have been undoing all my work! Do you have any IDEA how hard I've been working to take those filthy criminals down?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: WHAT?! You're the one going around attacking everyone! I thought it was that Horrace guy!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureolamad</expression>
+                    <speech>GIRL: Who? You disgust me! But it doesn't matter - I've almost got him! I've been waiting so long!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Wait!</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>56</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+	
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan! That girl who was just here...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: She's the one from the warehouse! That showed up after I fixed the creepy French dude! I tried to tell you...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I know that girl... I believe it's me she's looking for. She wants to kill me.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: What!? That's insane.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: I'm afraid not. I killed her parents. I am a murderer, Alan.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: She can explain to you herself. We are going back to the Old Hospital - MY Old Hospital...</speech>               
+</convo>
+
+
+        </id>
+	<id>
+		<reference>57</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+	
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Well Alan... Welcome to the Old Hospital. This place was like a home to me.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Wow! Look at that sign! Was that..."Bleed's Wing"? You must have been a legend!</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Ha. That was a long time ago. I used to stand right here, right in this spot! Along with... My student.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Your student? What was he like?</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Ha... His name was Pipe. Dwayne Pipe. An unfortunate name, perhaps, but he was quite brilliant.</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: He was forced to leave. My patients... They started dying. I was killing them - but I never understood how it was happening. They were fine one minute and then...</speech>
+                </convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Wow... And you think that girl who wants to kill you is HERE? </speech>
+                </convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: I believe so. Her parents were the last ones to die under my care...</speech>
+                </convo>
+
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Someone's coming! </speech>
+                </convo>
+
+
+
+        </id>
+	<id>
+		<reference>58</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>bugeater</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeeatervoms</expression>
+                    <speech>PETER: Doctors! The weird guy in the trenchcoat in the alley said you'd be here!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeeatervoms</expression>
+                    <speech>PETER: It happened again! I'm poisoned!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bugeeatervoms</expression>
+                    <speech>PETER: I don't want to die!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>petervom</expression>
+                    <speech>PETER: Hrrrruuuugh!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Oh man! Hold in there Peter! </speech>               
+</convo>
+
+
+
+
+
+
+
+        </id>
+	<id>
+		<reference>59</reference>
+                <bg>hospital</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bugeater</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bugeater</expression>
+                    <speech>PETER: Ugh... Thank you! I don't know what happened!</speech>               
+</convo>
+
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Peter, have you seen a girl around here?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bugeater</expression>
+                    <speech>PETER: A girl? No - but I heard the city's crime boss is plenty mad about what's been happening to everyone!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bugeater</expression>
+                    <speech>PETER: He's on his way! I have to get out of here! Mister Caruthers will get nervous!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bugeater</expression>
+                    <speech>PETER: And when he's nervous, he gets gassy and aggressive, in that order!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>60</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>henchman1</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>henchman1</expression>
+                    <speech>HENCHMAN: Doktor! </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>henchman2</expression>
+                    <speech>HENCHMAN: DOKTOR! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>henchman1</expression>
+                    <speech>HENCHMAN: We are drive here to kill person who is hurting all our lovely criminals!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>henchman1</expression>
+                    <speech>HENCHMAN: But someone is cut our brakes! We are crash into sewage farm! Was not fun.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan, you must be very, very careful. We need to treat them back to back! I shudder to think what would happen to us should one of them perish on our table...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I understand. Quickly then!</speech>               
+</convo>
+
+
+
+
+        </id>
+	<id>
+		<reference>61</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+	
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Those two will sleep for a while. We must find Aureola - before she gets hurt!</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Wait! Doesn't she want to kill you? </speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I think the poor girl has been driven mad with grief. If it's me she wants... I should speak to her.</speech>
+                </convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: This isn't her fault, Alan...</speech>
+                </convo>
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Wait.. Who is that?</speech>
+                </convo>
+
+
+
+        </id>
+	<id>
+		<reference>62</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>junkystanding</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: Doc... Thanks goodness youse are here!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: I think I ate something really bad!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: I means, a girl stopped by and gave me a sandwich! She was real pretty... I ate it in kind of a hurry. But it tasted like metal! And now...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: *tick tick tick*</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probe</expression>
+                    <speech>PROBE: Oh wow... I hope that's a clock!</speech>               
+</convo>
+
+
+
+
+
+
+
+        </id>
+	<id>
+		<reference>63</reference>
+                <bg>hospital</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>junkystanding</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: A bomb? Oh yowzers - so I was nearly blowed up?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probeteeth</expression>
+                    <speech>PROBE: Yes. *shudder*. But don't touch it! We didn't quite manage to defuse it completely!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Aureolamad</expression>
+                    <speech>GIRL: So you've done it again, have you?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Aureolamad</expression>
+                    <speech>GIRL: Fixed some worthless lowlife criminal?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>junkystanding</expression>
+                    <speech>GUTS: You! Youse was at the junkyard! You tried to kill me! You're crazy!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Aureolamad</expression>
+                    <speech>GIRL: I'm not crazy!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Aureola...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Aureola1</expression>
+                    <speech>AUREOLA: What? How do you know my name?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Aureola1</expression>
+                    <speech>AUREOLA: Who are you?</speech>               
+</convo>
+
+        </id>
+<id>
+		<reference>64</reference>
+                <bg>hospital</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Aureola1</character4>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: You don't recognize me, child? Well, maybe that's understandable. I am somewhat gone to ruin...</speech>               
+</convo>
+	
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I am the man you're looking for. I was the surgeon who operated on your parents. </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: I am sorry they died.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: I understand you mean to take your vengeance. I must admit... I have thought about ending it myself.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: In fact, not too long ago I deliberately stepped out in front of a pizza van! If it weren't for this extraordinary young man here... Well...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureola1</expression>
+                    <speech>AUREOLA: Dr. Bleed?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedboohoo</expression>
+                    <speech>BLEED: ...yes.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureola1</expression>
+                    <speech>AUREOLA: Oh doctor! I thought... But it's not you I'm looking for!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureolawellangry</expression>
+                    <speech>AUREOLA: IT'S HIM!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>65</reference>
+                <bg>hospital</bg>
+                <character1>Bleed</character1>
+		<character2>Horrace1</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Aureola1</character4>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Horrace1</expression>
+                    <speech>HORRACE: Bonjour!</speech>               
+</convo>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureolawellangry</expression>
+                    <speech>AUREOLA: MURDERER!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Dwayne!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probeteeth</expression>
+                    <speech>PROBE: DWAYNE?!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Horrace1</expression>
+                    <speech>DWAYNE: Ah, my dear sweet mentor, Dr. Bleed. I would ask how you are after all these years... But I can see for myself! You are disgusting.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probeteeth</expression>
+                    <speech>PROBE: You were the doc's old student? YOU'RE Dwayne Pipe? You said your name was Horrace!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Horrace1</expression>
+                    <speech>DWAYNE: I've been hiding in the jungle since this insane little witch started hunting me down. When I came back, do you really think I'd use my real, horrible name?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureolaboohoo</expression>
+                    <speech>AUREOLA: You animal! This bomb wasn't meant for you, but...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probeteeth</expression>
+                    <speech>PROBE: No! That bomb isn't fully defused! DON'T-</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>false</expression>
+                    <speech>*BOOM*</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Aureolabombed</expression>
+                    <speech>AUREOLA: Ahhhhh!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>probeteeth</expression>
+                    <speech>PROBE: AUREOLA!</speech>               
+</convo>
+
+
+
+
+        </id>
+	<id>
+		<reference>66</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>aureolabombed</character2>                
+		<character3>bleed</character3>
+		<character4>probeteeth</character4>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Horrace1</expression>
+                    <speech>DWAYNE: Ah ha ha! Pathetic!</speech>               
+</convo>
+
+
+
+        </id>
+<id>
+		<reference>98</reference>
+                <bg>hospital</bg>
+                <character1>bleed</character1>
+		<character2>false</character2>                
+		<character3>Horrace4</character3>
+		<character4>probeteeth</character4>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Dwayne... What happened to you? </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Horrace4</expression>
+                    <speech>DWAYNE: You were always so boring, Dr. Bleed! There is so much to be learned from the sweet kiss of the poison needle!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Horrace3</expression>
+                    <speech>DWAYNE: But who cares! That was then, and this is now. And before I leave - a parting gift, my dear doctor!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>horrorsneedle</expression>
+                    <speech>DWAYNE: The same poison that did in all your precious patients!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Bleedsicky</expression>
+                    <speech>BLEED: Grooo....</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>horrace1</expression>
+                    <speech>DWAYNE: Ha! I could kill you too, pizza boy! But how much better to let you try to save him - and know his demise was down to the failing of your own fat fingers!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>horrace4</expression>
+                    <speech>DWAYNE: Mwuahahahaha! MWUAHAHAHAHA! Bonne nuit! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Doc! Hold on! He won't get away with this!</speech>               
+</convo>
+
+
+
+
+        </id>
+	<id>
+		<reference>99</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>false</character3>
+		<character4>probeteeth</character4>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I saved them! Doc and Aureola will pull through! But Horrace - Dwayne - got away...</speech>               
+</convo>
+
+
+
+        </id>
+
+
+
+<id>
+		<reference>67</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>false</character3>
+		<character4>probeteeth</character4>
+
+
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutalityradge</expression>
+                    <speech>BRUTALITY: Dammit maggot! When I say "assume the position", I mean you do it now! NOW! GET ON THE FLOOR!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Horrace4</expression>
+                    <speech>DWAYNE: Ah! Help! Help! He is crazy!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Officer Brutality?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutality</expression>
+                    <speech>BRUTALITY: Probe? I should have guessed it! Reports came in that there was an explosion at the Old Hospital.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutality</expression>
+                    <speech>BRUTALITY: I came running, and found Nancy Fancy-pants here fleeing the scene!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Horrace4</expression>
+                    <speech>DWAYNE: *whimper* Please - no more beatings! Enough!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutalityradge</expression>
+                    <speech>BRUTALITY: I'll TELL you when you've had enough!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Horrace4</expression>
+                    <speech>DWAYNE: Ack...my stomach!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Whoah! Hey - easy! Easy! Look at that!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutality</expression>
+                    <speech>BRUTALITY: What's happening to his stomach?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I don't know! Unless... Get him to the operating table!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>Horrace4</expression>
+                    <speech>DWAYNE: Ah! Help! Officer, he wants to spoon me! AAARRGH!</speech>               
+</convo>
+
+
+
+        </id>
+
+
+
+
+<id>
+		<reference>68</reference>
+                <bg>hospital</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>brutality</character3>
+		<character4>probeteeth</character4>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Wow! I guess I didn't kill all those weird bugs in him after all. Actually, that was a pretty big one to miss! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutality</expression>
+                    <speech>BRUTALITY: So, Probe... Care to tell me what's going on? You find out who was behind all the attacks? </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenormaloveralls</expression>
+                    <speech>PROBE: (Aureola... But none of this was really her fault, even if she did go off the rails a bit! Plus she's hot!)</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Officer, I think I can say with a clear conscience that Horrace d'Obscene - a.k.a. Dwayne Pipe - is the man ultimately responsible for all your injured criminals!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: And if you could, would you reopen the file on the deaths at the Old Hospital? I think you'll find there's new evidence to clear Dr. Bleed...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutality</expression>
+                    <speech>BRUTALITY: Son, when you helped me, you pulled the proverbial thorn from the lion's paw. And by "thorn", I mean "handcuffs". And by "lion's paw", I mea- </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I remember!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>brutality</expression>
+                    <speech>BRUTALITY: Point is – I'm going to help you out. And I reckon I've got a special punishment in mind that should be right up Mister Pipe's alley!</speech>               
+</convo>
+
+
+
+
+        </id>
+
+	<id>
+		<reference>70</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>false</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Hey! What's that down the alley? Push it over here!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>thedeliriumtarp</expression>
+                    <speech>PROBE: Wow!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>thedeliriumtarp</expression>
+                    <speech>PROBE: Let's get the sheet off!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>thedelrium</expression>
+                    <speech>PROBE: AWESOME!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Holy smoke! Look at that bad boy! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: "The DeLirium"...cool name! It's like what people from 20 years ago thought a car from the future would look like!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Alan, there's no time for this! We need to get back to the suture...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: I mean, back to the suturing, and the cutting, and all the rest of the surgery!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: No way! Look, I reckon we can fix this!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Hmm...what's a "Flux Capacitor?"</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Never mind! If there's a problem that can't be solved by random hacking and slashing, I don't want to hear about it!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>2</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Great Scott!</speech>               
+</convo>
+
+
+
+        </id>
+<id>
+		<reference>71</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Huh. After we pushed it back down the alley, I pressed a button marked "five minutes into the future" - and the car disappeared! Weird!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>false</expression>
+                    <speech>OFFSCREEN VOICE 1: Morty! Quick! We have to get to the old clock tower for exactly when the lightning strik...-WHERE THE HECK IS THE CAR?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>false</expression>
+                    <speech>OFFSCREEN VOICE 2: I don't know, Doc! It was right here! Literally right where you're standing right now! </speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>false</expression>
+                    <speech>*FZZZZFT!*</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>false</expression>
+                    <speech>OFFSCREEN VOICE 1: *ARRGH!* Oh sweet mother of... I've been hit by a time-travelling car! My chest is all broken! Arrrgh...!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Should we go help them?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Hmm...nah. We already did a car-crash rib surgery, remember?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: I hit you with the pizza van right back at the start of the game?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleedhappy</expression>
+                    <speech>BLEED: Oh yes! Ha! Happy days...</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>1</clipnumber>
+                    <expression>false</expression>
+                    <speech>OFFSCREEN VOICE 1: Augh! I'm bleeding heavily from my ear... It's all going dark...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Well, back to the surgery!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>72</reference>
+                <bg>alley</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>bum</character3>
+		<character4>Probeteeth</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bum</expression>
+                    <speech>BIZZARE-LOOKING ROBOT: Greetings humans! I am short-circuiting and in need of your assistance!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bum</expression>
+                    <speech>BIZZARE-LOOKING ROBOT: Can you open my access panel and rewire me?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Who... What are you?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bum</expression>
+                    <speech>BIZZARE-LOOKING ROBOT: I am a Bio-Utility Mechanoid, but most people just call me by my initials.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Bio-Utility Mechanoid... So, BUM the robot? That's gross!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>bumbumpoint</expression>
+                    <speech>BUM: It gets better! Care to guess where my access panel is located?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: This is the worst bonus mission ever.</speech>               
+</convo>
+
+
+
+
+        </id>
+	<id>
+		<reference>73</reference>
+                <bg>alley</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probeteeth</character3>
+		<character4>bum</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Well, that was awkward, rummaging around in your nether circuits and all.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>bum</expression>
+                    <speech>BUM: Please, human. I am merely a machine. I have no emotion or feeling. You should not feel uncomfortable.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>bumbumpoint</expression>
+                    <speech>BUM: Now, could you please close my hatch again?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: Fine...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>*CLICK*</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>bum</expression>
+                    <speech>BUM: My! What cold hands you have!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: That's it! Get out!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>bum</expression>
+                    <speech>BUM: What? You're not even going to buy me dinner?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probeteeth</expression>
+                    <speech>PROBE: OUT!</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>74</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>Bleed</character2>                
+		<character3>Stupormouthclosed</character3>
+		<character4>Probenormal</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: *KAPOW!* I am the mighty Stuporman! Faster than a receding mullet, more powerful than a... Ah forget it. Point is, I'm great.</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: Hear now my tragic background story: my nemesis Les Loser has poisoned me with deadly Kraptonite and it totally sucks.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenormal</expression>
+                    <speech>PROBE: I like this guy!</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: My potent ass-ray vision (don't ask) shows me you two are expert-level surgeons. Only to such talent can I entrust my incredible physique.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Probenormal</expression>
+                    <speech>PROBE: That's some nice crotch-stuffing. What is that? A brick?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: Yes. Now, God speed, gentlemen...and keep your filthy hands off my brick.</speech>               
+</convo>
+
+
+
+        </id>
+	<id>
+		<reference>75</reference>
+                <bg>warehouse</bg>
+                <character1>Bleed</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>stupormouthclosed</character4>
+	
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: Good work, citizens. As my people would say on Krapton, "Live long and prosper."</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Ah ha ha! Sure that's not Vulcans?</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: Silence, mortal.</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: Now, go-go-gadget feet!</speech>               
+</convo>
+
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>stupormouthclosed</expression>
+                    <speech>STUPORMAN: Hnnnngh! </speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>stupormouthclosed</expression>
+                    <speech>STUPORMAN: ...</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>stupormouthopen</expression>
+                    <speech>STUPORMAN: That just means I've decided to walk. You have the gratitude of all of Eternia.</speech>               
+</convo>
+
+
+
+
+
+
+        </id>
+	<id>
+		<reference>76</reference>
+                <bg>warehouse</bg>
+                <character1>false</character1>
+		<character2>false</character2>                
+		<character3>Probenorm</character3>
+		<character4>Bleed</character4>
+	
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Well, I think that was worth the price of the free download for this game just in itself!</speech>               
+</convo>
+
+
+<convo>
+                    <clipnumber>4</clipnumber>
+                    <expression>Bleed</expression>
+                    <speech>BLEED: Do you really think he was worried we'd try to touch a brick that he'd been keeping in his pants?</speech>               
+</convo>
+
+<convo>
+                    <clipnumber>3</clipnumber>
+                    <expression>Probenorm</expression>
+                    <speech>PROBE: Ha! Well, back to business!</speech>               
+</convo>
+
+
+
+
+
+
+
+        </id>
+</dialogue>
+

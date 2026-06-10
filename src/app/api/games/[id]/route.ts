@@ -77,6 +77,7 @@ export async function PUT(
 
     const imageFile = formData.get("image") as File | null;
     const swfFile = formData.get("swf") as File | null;
+    const swfPath = formData.get("swfPath") as string | null;
 
     const updateData: any = {};
 
@@ -137,8 +138,8 @@ export async function PUT(
         const filePath = path.join(uploadDir, fileName);
         await writeFile(filePath, buffer);
 
-        // Deletar SWF antigo
-        if (game.swfFile) {
+        // Deletar SWF antigo apenas se for da pasta de uploads
+        if (game.swfFile && game.swfFile.startsWith("/uploads/swfs/")) {
           try {
             const oldPath = path.join(process.cwd(), "public", game.swfFile);
             await unlink(oldPath);
@@ -149,6 +150,10 @@ export async function PUT(
 
         updateData.swfFile = `/uploads/swfs/${fileName}`;
         updateData.gameUrl = null; // Limpar se for SWF
+      } else if (swfPath !== null) {
+        // Se mudou ou informou caminho manual do SWF
+        updateData.swfFile = swfPath.trim() || null;
+        updateData.gameUrl = null;
       }
     }
 
@@ -195,7 +200,7 @@ export async function DELETE(
       }
     }
 
-    if (game.swfFile) {
+    if (game.swfFile && game.swfFile.startsWith("/uploads/swfs/")) {
       try {
         const filePath = path.join(process.cwd(), "public", game.swfFile);
         await unlink(filePath);

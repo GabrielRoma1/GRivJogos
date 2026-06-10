@@ -110,7 +110,7 @@ export async function POST(request: Request) {
     }
 
     let imageUrl = "";
-    let swfPath = "";
+    let swfPathSaved = "";
 
     // 1. Upload do Ícone do Jogo
     if (imageFile && imageFile.size > 0) {
@@ -135,8 +135,10 @@ export async function POST(request: Request) {
       );
     }
 
-    // 2. Upload do arquivo SWF caso o jogo seja do tipo Flash/SWF
+    // 2. Upload ou caminho do arquivo SWF caso o jogo seja do tipo Flash/SWF
     if (gameType === "SWF") {
+      const swfPathManual = formData.get("swfPath") as string | null;
+
       if (swfFile && swfFile.size > 0) {
         const bytes = await swfFile.arrayBuffer();
         const buffer = Buffer.from(bytes);
@@ -148,10 +150,12 @@ export async function POST(request: Request) {
 
         const filePath = path.join(uploadDir, fileName);
         await writeFile(filePath, buffer);
-        swfPath = `/uploads/swfs/${fileName}`;
+        swfPathSaved = `/uploads/swfs/${fileName}`;
+      } else if (swfPathManual && swfPathManual.trim() !== "") {
+        swfPathSaved = swfPathManual.trim();
       } else {
         return NextResponse.json(
-          { error: "O arquivo SWF (.swf) é obrigatório para jogos do tipo SWF" },
+          { error: "O arquivo SWF (.swf) ou o caminho estático do SWF é obrigatório para jogos do tipo SWF" },
           { status: 400 }
         );
       }
@@ -166,7 +170,7 @@ export async function POST(request: Request) {
         imageUrl,
         gameType,
         gameUrl: gameType === "HTML5" ? gameUrl : null,
-        swfFile: gameType === "SWF" ? swfPath : null,
+        swfFile: gameType === "SWF" ? swfPathSaved : null,
         isActive,
         categoryId,
       },

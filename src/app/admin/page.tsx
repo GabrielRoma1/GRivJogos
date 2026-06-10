@@ -55,6 +55,8 @@ export default function AdminPage() {
   const [gameUrl, setGameUrl] = useState("");
   const [gameImageFile, setGameImageFile] = useState<File | null>(null);
   const [gameSwfFile, setGameSwfFile] = useState<File | null>(null);
+  const [gameSwfSource, setGameSwfSource] = useState<"upload" | "path">("upload");
+  const [gameSwfPath, setGameSwfPath] = useState("");
   const [gameIsActive, setGameIsActive] = useState(true);
   const [formError, setFormError] = useState("");
   const [formSuccess, setFormSuccess] = useState("");
@@ -193,10 +195,17 @@ export default function AdminPage() {
       return;
     }
 
-    if (gameType === "SWF" && !editingGame && !gameSwfFile) {
-      setFormError("O arquivo .swf é obrigatório para novos jogos em Flash.");
-      setFormLoading(false);
-      return;
+    if (gameType === "SWF" && !editingGame) {
+      if (gameSwfSource === "upload" && !gameSwfFile) {
+        setFormError("O arquivo .swf é obrigatório para novos jogos em Flash.");
+        setFormLoading(false);
+        return;
+      }
+      if (gameSwfSource === "path" && !gameSwfPath.trim()) {
+        setFormError("O caminho do arquivo SWF é obrigatório para novos jogos em Flash.");
+        setFormLoading(false);
+        return;
+      }
     }
 
     if (gameType === "HTML5" && !gameUrl) {
@@ -214,7 +223,13 @@ export default function AdminPage() {
       formData.append("isActive", String(gameIsActive));
       if (gameType === "HTML5") formData.append("gameUrl", gameUrl);
       if (gameImageFile) formData.append("image", gameImageFile);
-      if (gameType === "SWF" && gameSwfFile) formData.append("swf", gameSwfFile);
+      if (gameType === "SWF") {
+        if (gameSwfSource === "upload" && gameSwfFile) {
+          formData.append("swf", gameSwfFile);
+        } else if (gameSwfSource === "path" && gameSwfPath) {
+          formData.append("swfPath", gameSwfPath.trim());
+        }
+      }
 
       const url = editingGame ? `/api/games/${editingGame.id}` : "/api/games";
       const method = editingGame ? "PUT" : "POST";
@@ -248,6 +263,20 @@ export default function AdminPage() {
     setGameType(game.gameType);
     setGameUrl(game.gameUrl || "");
     setGameIsActive(game.isActive);
+
+    if (game.gameType === "SWF" && game.swfFile) {
+      if (game.swfFile.startsWith("/uploads/swfs/")) {
+        setGameSwfSource("upload");
+        setGameSwfPath("");
+      } else {
+        setGameSwfSource("path");
+        setGameSwfPath(game.swfFile);
+      }
+    } else {
+      setGameSwfSource("upload");
+      setGameSwfPath("");
+    }
+
     setShowGameForm(true);
   };
 
@@ -260,6 +289,8 @@ export default function AdminPage() {
     setGameUrl("");
     setGameImageFile(null);
     setGameSwfFile(null);
+    setGameSwfSource("upload");
+    setGameSwfPath("");
     setGameIsActive(true);
     setShowGameForm(false);
   };
@@ -481,17 +512,66 @@ export default function AdminPage() {
                 </div>
 
                 {gameType === "SWF" ? (
-                  <div>
-                    <label className="block text-xs font-semibold text-purple-300 uppercase mb-1">
-                      Arquivo Flash SWF * {editingGame && <span className="text-[10px] text-pink-400 lowercase">(envie apenas se quiser alterar)</span>}
-                    </label>
-                    <input
-                      type="file"
-                      accept=".swf"
-                      required={!editingGame}
-                      onChange={(e) => setGameSwfFile(e.target.files?.[0] || null)}
-                      className="w-full text-xs text-purple-300 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-purple-900 file:text-purple-100 hover:file:bg-purple-800"
-                    />
+                  <div className="space-y-3">
+                    <div>
+                      <label className="block text-xs font-semibold text-purple-300 uppercase mb-1">Origem do arquivo SWF *</label>
+                      <div className="flex gap-4 mt-1">
+                        <label className="flex items-center gap-2 text-xs text-purple-200 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="swfSource"
+                            value="upload"
+                            checked={gameSwfSource === "upload"}
+                            onChange={() => setGameSwfSource("upload")}
+                            className="accent-pink-500"
+                          />
+                          Fazer Upload (.swf)
+                        </label>
+                        <label className="flex items-center gap-2 text-xs text-purple-200 cursor-pointer">
+                          <input
+                            type="radio"
+                            name="swfSource"
+                            value="path"
+                            checked={gameSwfSource === "path"}
+                            onChange={() => setGameSwfSource("path")}
+                            className="accent-pink-500"
+                          />
+                          Caminho na pasta public (Estático)
+                        </label>
+                      </div>
+                    </div>
+
+                    {gameSwfSource === "upload" ? (
+                      <div>
+                        <label className="block text-[11px] font-semibold text-purple-400 uppercase mb-1">
+                          Arquivo Flash SWF * {editingGame && <span className="text-[10px] text-pink-400 lowercase">(envie apenas se quiser alterar)</span>}
+                        </label>
+                        <input
+                          type="file"
+                          accept=".swf"
+                          required={!editingGame}
+                          onChange={(e) => setGameSwfFile(e.target.files?.[0] || null)}
+                          className="w-full text-xs text-purple-300 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-purple-900 file:text-purple-100 hover:file:bg-purple-800"
+                        />
+                      </div>
+                    ) : (
+                      <div>
+                        <label className="block text-[11px] font-semibold text-purple-400 uppercase mb-1">
+                          Caminho do SWF na pasta public *
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={gameSwfPath}
+                          onChange={(e) => setGameSwfPath(e.target.value)}
+                          placeholder="Ex: /games/amateur-surgeon/Amateur Surgeon.swf"
+                          className="w-full bg-slate-950/60 border border-purple-900/50 rounded-xl py-2 px-3 focus:outline-none focus:border-pink-500 text-white text-sm"
+                        />
+                        <p className="text-[10px] text-purple-400 mt-1">
+                          Coloque a pasta inteira do jogo em <code className="bg-slate-950 px-1 py-0.5 rounded">public/games/nome-do-jogo/</code> e aponte para o arquivo principal (.swf).
+                        </p>
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div>
