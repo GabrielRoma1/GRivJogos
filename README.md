@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GRiv Jogos
 
-## Getting Started
+Portal de jogos online com visual nostálgico, focado em clássicos Flash (via [Ruffle](https://ruffle.rs/)) e jogos HTML5. Inclui painel administrativo, contas de usuário, favoritos, histórico e suporte ao emulador **Social Empires**.
 
-First, run the development server:
+## Tecnologias
+
+- [Next.js 15](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [Prisma](https://www.prisma.io/) + SQLite
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Ruffle](https://ruffle.rs/) (emulador Flash no navegador)
+
+## Requisitos
+
+- Node.js 20+
+- npm
+- Windows (para o emulador Social Empires via `.exe`)
+
+## Instalação
+
+```bash
+# Clonar o repositório e entrar na pasta
+cd "C:\GRiv Jogos"
+
+# Instalar dependências
+npm install
+
+# Configurar variável de ambiente (crie o arquivo .env na raiz)
+# DATABASE_URL="file:./prisma/dev.db"
+
+# Aplicar migrações do banco
+npx prisma migrate deploy
+npx prisma generate
+```
+
+Na primeira execução, acesse `GET /api/auth/setup` para criar o administrador padrão e as categorias iniciais (somente se ainda não houver admin cadastrado).
+
+## Executar em desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O site abre em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Inicia o servidor de desenvolvimento na porta **3000** |
+| `npm run build` | Gera build de produção |
+| `npm run start` | Inicia o servidor de produção na porta **3000** |
+| `npm run lint` | Executa o ESLint |
+| `npm run social-emperors` | Inicia o emulador Social Empires na porta **5050** |
 
-## Learn More
+## Estrutura do projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+GRiv Jogos/
+├── prisma/              # Schema e migrações SQLite
+├── public/uploads/      # Ícones e arquivos SWF enviados pelo admin
+├── scripts/             # Scripts auxiliares (emulador, seed)
+├── services/
+│   └── social-emperors/ # Bundle do emulador (~1,3 GB, não versionado)
+├── src/app/
+│   ├── admin/           # Painel administrativo
+│   ├── api/             # Rotas da API REST
+│   ├── jogo/[slug]/     # Página de cada jogo
+│   ├── login/           # Login de usuários
+│   ├── social-emperors/ # Proxy reverso para o emulador
+│   └── page.tsx         # Página inicial
+└── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tipos de jogo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Tipo | Como funciona |
+|------|----------------|
+| **SWF** | Um arquivo `.swf` é servido em `public/uploads/swfs/` e reproduzido com Ruffle na página do jogo. |
+| **HTML5** | URL externa ou interna carregada em um `<iframe>` na página do jogo. |
 
-## Deploy on Vercel
+### Cadastrar jogos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Acesse `/admin` e faça login como administrador.
+2. Preencha título, descrição, categoria e ícone.
+3. Para **SWF**: envie o arquivo `.swf` ou informe um caminho em `public/`.
+4. Para **HTML5**: informe a URL do jogo (`gameUrl`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Social Empires
+
+O Social Empires **não** é um SWF simples: é um emulador Python/Flask empacotado que precisa de um servidor próprio na porta **5050**.
+
+### Configuração
+
+1. Coloque o pacote `social-emperors_0.04a` em:
+
+   ```
+   services/social-emperors/
+     social-emperors_0.04a.exe
+     bundle/
+     saves/
+   ```
+
+2. Em **dois terminais**, execute:
+
+   ```bash
+   npm run social-emperors   # terminal 1 — emulador
+   npm run dev               # terminal 2 — site
+   ```
+
+3. Acesse o jogo em `/jogo/social-empires`.
+
+### Como funciona a integração
+
+O site usa um **proxy** em `/social-emperors` que encaminha as requisições para `http://127.0.0.1:5050`, reescrevendo URLs e cookies para funcionar no mesmo domínio (`localhost:3000`). Isso evita problemas de CORS e de cookies em iframes.
+
+Na tela de login do emulador:
+
+- Selecione sua vila
+- Escolha a versão **0.9.26b (Working)**
+- Clique em **Log in**
+
+### Cadastrar no banco (opcional)
+
+Se o jogo ainda não existir no banco:
+
+```bash
+node scripts/seed-social-emperors.mjs
+```
+
+### Produção
+
+O Social Empires exige um **servidor sempre ativo** (VPS). Não é compatível com hospedagem serverless (ex.: Vercel) sem um backend separado para o emulador.
+
+## Funcionalidades do site
+
+- **Home** — listagem de jogos por categoria, busca e ordenação
+- **Página do jogo** — player SWF (Ruffle) ou iframe HTML5, favoritos e tela cheia
+- **Usuários** — registro, login, favoritos e histórico de jogos (`/login`)
+- **Admin** — CRUD de jogos e categorias, upload de arquivos, reordenação por arrastar
+
+## API principal
+
+| Rota | Métodos | Descrição |
+|------|---------|-----------|
+| `/api/games` | GET, POST | Listar e criar jogos |
+| `/api/games/[id]` | GET, PUT, DELETE | Detalhe, edição e remoção |
+| `/api/games/[id]/view` | POST | Incrementar visualizações |
+| `/api/games/reorder` | POST | Reordenar jogos na home |
+| `/api/categories` | GET, POST | Categorias |
+| `/api/auth/login` | POST | Login do administrador |
+| `/api/auth/user/*` | — | Login, registro e sessão de usuários |
+| `/api/user/favorites` | GET, POST | Favoritos |
+| `/api/user/history` | GET, POST | Histórico de jogos |
+
+## Licença
+
+Projeto privado. O emulador Social Empires é um projeto de preservação de terceiros ([AcidCaos/socialemperors](https://github.com/AcidCaos/socialemperors)), licenciado sob GPL-3.0.
