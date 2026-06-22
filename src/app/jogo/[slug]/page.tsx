@@ -33,6 +33,7 @@ export default function GamePage({
   const [relatedGames, setRelatedGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [user, setUser] = useState<any>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
 
   // 1. Carregar detalhes do jogo e incrementar visualização
@@ -47,11 +48,34 @@ export default function GamePage({
           // Incrementar visualização
           fetch(`/api/games/${data.id}/view`, { method: "POST" });
           
-          // Verificar se é favorito
-          const storedFavs = localStorage.getItem("griv_favorites");
-          if (storedFavs) {
-            const favList = JSON.parse(storedFavs);
-            setIsFavorite(favList.includes(data.id));
+          // Buscar usuário e carregar favoritos/histórico
+          const userRes = await fetch("/api/auth/user/me");
+          if (userRes.ok) {
+            const userData = await userRes.json();
+            if (userData.user) {
+              setUser(userData.user);
+              
+              // Adicionar ao Histórico do Jogador
+              fetch("/api/user/history", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ gameId: data.id })
+              });
+
+              // Carregar favoritos do banco
+              const favRes = await fetch("/api/user/favorites");
+              if (favRes.ok) {
+                const favs = await favRes.json();
+                setIsFavorite(favs.some((f: any) => f.gameId === data.id));
+              }
+            } else {
+              // Carregar favoritos locais se não estiver logado
+              const storedFavs = localStorage.getItem("griv_favorites");
+              if (storedFavs) {
+                const favList = JSON.parse(storedFavs);
+                setIsFavorite(favList.includes(data.id));
+              }
+            }
           }
 
           // Carregar relacionados da mesma categoria
@@ -72,53 +96,7 @@ export default function GamePage({
     loadGameData();
   }, [slug]);
 
-  // 2. Carregar emulador Ruffle para jogos SWF
-  useEffect(() => {
-    if (!game || game.gameType !== "SWF" || typeof window === "undefined") return;
-
-    const scriptId = "ruffle-wasm-script";
-    let script = document.getElementById(scriptId) as HTMLScriptElement;
-
-    const initRuffle = () => {
-      const ruffle = (window as any).RufflePlayer?.newest();
-      if (!ruffle) return;
-      
-      const player = ruffle.createPlayer();
-      const container = document.getElementById("ruffle-player-container");
-      if (container && game.swfFile) {
-        container.innerHTML = "";
-        container.appendChild(player);
-        player.load(game.swfFile);
-        player.style.width = "100%";
-        player.style.height = "100%";
-        // Permitir foco de teclado para o jogo
-        player.focus();
-      }
-    };
-
-    if (!script) {
-      script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://unpkg.com/@ruffle-rs/ruffle";
-      script.async = true;
-      script.onload = () => {
-        initRuffle();
-      };
-      document.body.appendChild(script);
-    } else {
-      // Script já inserido, inicializar diretamente
-      if ((window as any).RufflePlayer) {
-        initRuffle();
-      } else {
-        script.addEventListener("load", initRuffle);
-      }
-    }
-
-    return () => {
-      const container = document.getElementById("ruffle-player-container");
-      if (container) container.innerHTML = "";
-    };
-  }, [game]);
+  // O Ruffle agora é inicializado em um componente isolado para evitar re-renders do React apagando o player
 
   // Alternar favorito
   const toggleFavorite = () => {
@@ -133,7 +111,18 @@ export default function GamePage({
       favList.push(game.id);
       setIsFavorite(true);
     }
-    localStorage.setItem("griv_favorites", JSON.stringify(favList));
+    
+    if (user) {
+      // Salvar no banco de dados se estiver logado
+      fetch("/api/user/favorites", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ gameId: game.id })
+      });
+    } else {
+      // Salvar no localstorage se não estiver
+      localStorage.setItem("griv_favorites", JSON.stringify(favList));
+    }
   };
 
   // Ativar tela cheia
@@ -227,11 +216,15 @@ export default function GamePage({
           <div
             id="game-viewport"
             ref={viewportRef}
-            className="w-full aspect-video md:max-h-[580px] bg-black rounded-2xl overflow-hidden border border-purple-900/50 relative shadow-2xl flex items-center justify-center"
+            className={`w-full bg-black rounded-2xl overflow-hidden border border-purple-900/50 relative shadow-2xl flex items-center justify-center ${
+              game.slug === "social-empires"
+                ? "h-[650px] max-w-[820px] mx-auto"
+                : "aspect-video md:max-h-[580px]"
+            }`}
           >
             {game.gameType === "SWF" ? (
-              // Player do Ruffle
-              <div id="ruffle-player-container" className="w-full h-full" />
+              // Player do Ruffle isolado
+              game.swfFile && <RufflePlayer swfFile={game.swfFile} />
             ) : (
               // IFrame para HTML5
               game.gameUrl && (
@@ -267,7 +260,9 @@ export default function GamePage({
               Dica de Compatibilidade
             </h4>
             <p className="text-[11px] text-purple-300 leading-normal">
-              {game.gameType === "SWF" 
+              {game.slug === "social-empires"
+                ? "Este jogo usa o emulador Social Emperors. Antes de jogar, execute npm run social-emperors. Na tela de login, selecione sua vila e a versão 0.9.26b (Working), depois clique em Log in."
+                : game.gameType === "SWF"
                 ? "Este jogo roda usando emulador Flash Ruffle. Caso os controles de teclado não respondam, clique dentro da tela do jogo para focar."
                 : "Este jogo roda nativamente em HTML5. Caso não carregue ou fique branco, verifique suas permissões de iframe no navegador."}
             </p>
@@ -313,3 +308,89 @@ export default function GamePage({
     </div>
   );
 }
+
+// Componente isolado para garantir que o Ruffle não seja desmontado ou limpo pelos re-renders do React
+function RufflePlayer({ swfFile }: { swfFile: string }) {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const scriptId = "ruffle-wasm-script";
+    let script = document.getElementById(scriptId) as HTMLScriptElement;
+
+    const initRuffle = () => {
+      const ruffle = (window as any).RufflePlayer?.newest();
+      if (!ruffle) return;
+      
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("ruffle-player-container");
+      if (container) {
+        container.innerHTML = "";
+        container.appendChild(player);
+        
+        // BURLAR SITE-LOCK DEFINITIVAMENTE:
+        // Buscamos o arquivo binário localmente e carregamos no Ruffle passando um 'swfFileName' falso.
+        // O uso de 'url' junto com 'data' faz o Ruffle ignorar os dados e tentar baixar da internet.
+        // Usamos config.base para garantir que recursos relativos sejam baixados do nosso próprio servidor.
+        player.config = {
+          allowScriptAccess: false, // Bloquear acesso ao JS da página para que o Site-Lock não leia o URL real pelo ExternalInterface
+          base: window.location.origin,
+        };
+
+        // Função para descobrir qual domínio o jogo espera (Site-Lock)
+        const getSpoofedUrl = (urlStr: string) => {
+          const lower = urlStr.toLowerCase();
+          if (lower.includes('bad-ice-cream') || lower.includes('nitrome')) return 'https://www.nitrome.com/game.swf';
+          if (lower.includes('earn-to-die') || lower.includes('notdoppler')) return 'https://www.notdoppler.com/game.swf';
+          if (lower.includes('papa') || lower.includes('flipline')) return 'https://www.flipline.com/game.swf';
+          if (lower.includes('sports-heads') || lower.includes('mousebreaker')) return 'https://www.mousebreaker.com/game.swf';
+          if (lower.includes('amateur-surgeon') || lower.includes('adultswim')) return 'https://games.adultswim.com/game.swf';
+          if (lower.includes('fireboy')) return 'https://www.miniclip.com/game.swf';
+          return 'https://www.armorgames.com/game.swf'; // Armor Games como padrão (resolve Epic War, etc)
+        };
+
+        fetch(swfFile)
+          .then(res => res.arrayBuffer())
+          .then(data => {
+            player.load({
+              data: data, // ArrayBuffer direto
+              swfFileName: getSpoofedUrl(swfFile), // URL específica do patrocinador para enganar o Site-Lock
+            });
+            player.style.width = "100%";
+            player.style.height = "100%";
+            // Permitir foco de teclado
+            setTimeout(() => player.focus(), 500);
+          })
+          .catch(err => {
+            console.error("Erro ao carregar SWF:", err);
+            // Fallback se o fetch falhar
+            player.load({ url: swfFile, base: window.location.origin });
+          });
+      }
+    };
+
+    if (!script) {
+      script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://unpkg.com/@ruffle-rs/ruffle";
+      script.async = true;
+      script.onload = () => {
+        initRuffle();
+      };
+      document.body.appendChild(script);
+    } else {
+      if ((window as any).RufflePlayer) {
+        initRuffle();
+      } else {
+        script.addEventListener("load", initRuffle);
+      }
+    }
+
+    return () => {
+      const container = document.getElementById("ruffle-player-container");
+      if (container) container.innerHTML = "";
+    };
+  }, [swfFile]);
+
+  return <div id="ruffle-player-container" className="w-full h-full" />;
+}
+

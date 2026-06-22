@@ -42,24 +42,39 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<{ id: string; username: string } | null>(null);
   
   // Favoritos locais
   const [favorites, setFavorites] = useState<string[]>([]);
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
 
   useEffect(() => {
-    // Carregar favoritos do LocalStorage
-    const storedFavs = localStorage.getItem("griv_favorites");
-    if (storedFavs) {
-      setFavorites(JSON.parse(storedFavs));
-    }
-
     async function loadData() {
       try {
-        const [gamesRes, catsRes] = await Promise.all([
-          fetch("/api/games?active=all"), // Mostra todos os ativos
-          fetch("/api/categories")
+        const [gamesRes, catsRes, userRes] = await Promise.all([
+          fetch("/api/games"), // Mostra apenas jogos ativos (isActive = true)
+          fetch("/api/categories"),
+          fetch("/api/auth/user/me")
         ]);
+
+        if (userRes.ok) {
+          const userData = await userRes.json();
+          if (userData.user) {
+            setUser(userData.user);
+            // Carregar favoritos do banco
+            const favRes = await fetch("/api/user/favorites");
+            if (favRes.ok) {
+              const favs = await favRes.json();
+              setFavorites(favs.map((f: any) => f.gameId));
+            }
+          } else {
+            // Carregar favoritos do LocalStorage
+            const storedFavs = localStorage.getItem("griv_favorites");
+            if (storedFavs) {
+              setFavorites(JSON.parse(storedFavs));
+            }
+          }
+        }
 
         if (gamesRes.ok) {
           const gamesData = await gamesRes.json();
@@ -79,7 +94,7 @@ export default function Home() {
     loadData();
   }, []);
 
-  const toggleFavorite = (gameId: string, e: React.MouseEvent) => {
+  const toggleFavorite = async (gameId: string, e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
@@ -90,7 +105,16 @@ export default function Home() {
       updated = [...favorites, gameId];
     }
     setFavorites(updated);
-    localStorage.setItem("griv_favorites", JSON.stringify(updated));
+    
+    if (user) {
+      await fetch("/api/user/favorites", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ gameId })
+      });
+    } else {
+      localStorage.setItem("griv_favorites", JSON.stringify(updated));
+    }
   };
 
   // Filtros
@@ -158,12 +182,30 @@ export default function Home() {
           >
             ❤️ Meus Favoritos ({favorites.length})
           </button>
-          <Link
-            href="/admin"
-            className="px-4 py-2 rounded-xl text-sm font-semibold border border-pink-500/30 text-pink-400 hover:bg-pink-500/10 transition-all duration-200"
-          >
-            Painel Admin ⚙️
-          </Link>
+          
+          {user ? (
+            <div className="flex items-center gap-3 ml-2 border-l border-purple-900/50 pl-4">
+              <span className="text-sm font-semibold text-cyan-400">Olá, {user.username}</span>
+              <button 
+                onClick={async () => {
+                  await fetch("/api/auth/user/logout", { method: "POST" });
+                  window.location.reload();
+                }}
+                className="text-xs px-2 py-1 bg-red-500/10 hover:bg-red-500/20 text-red-400 hover:text-red-300 rounded transition-colors"
+              >
+                Sair
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center ml-2 border-l border-purple-900/50 pl-4">
+              <Link
+                href="/login"
+                className="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl font-bold text-white shadow-[0_0_15px_rgba(236,72,153,0.4)] hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] hover:scale-[1.02] transition-all text-sm"
+              >
+                👤 Entrar
+              </Link>
+            </div>
+          )}
         </div>
       </header>
 

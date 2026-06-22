@@ -4,18 +4,17 @@ import { verifyPassword, signSession } from "@/lib/auth";
 
 export async function POST(request: Request) {
   try {
-    const { email, password } = await request.json();
+    const { username, password } = await request.json();
 
-    if (!email || !password) {
+    if (!username || !password) {
       return NextResponse.json(
-        { error: "E-mail e senha são obrigatórios" },
+        { error: "Usuário e senha são obrigatórios" },
         { status: 400 }
       );
     }
 
-    // Buscar usuário
-    const user = await prisma.admin.findUnique({
-      where: { email },
+    const user = await prisma.user.findUnique({
+      where: { username },
     });
 
     if (!user) {
@@ -25,7 +24,6 @@ export async function POST(request: Request) {
       );
     }
 
-    // Verificar senha
     const isPasswordValid = verifyPassword(password, user.password);
 
     if (!isPasswordValid) {
@@ -35,41 +33,27 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validar se é admin e usuário específico
-    if (user.role !== "admin" || user.email !== "gabriel@admin") {
-      return NextResponse.json(
-        { error: "Acesso não autorizado" },
-        { status: 403 }
-      );
-    }
-
-    // Criar sessão
     const sessionToken = signSession({
       id: user.id,
-      name: user.name,
-      email: user.email,
-      role: user.role,
+      username: user.username,
+      role: "user",
     });
 
-    // Criar resposta
     const response = NextResponse.json({
       success: true,
       user: {
         id: user.id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
+        username: user.username,
       },
     });
 
-    // Definir cookie HttpOnly seguro para a sessão
     response.cookies.set({
-      name: "admin_session",
+      name: "user_session",
       value: sessionToken,
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      maxAge: 60 * 60 * 24, // 24 horas
+      maxAge: 60 * 60 * 24 * 30, // 30 days
       path: "/",
     });
 

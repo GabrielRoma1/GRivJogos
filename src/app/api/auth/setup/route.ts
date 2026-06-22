@@ -5,22 +5,24 @@ import { hashPassword } from "@/lib/auth";
 export async function GET() {
   try {
     // Verificar se já existe algum usuário no banco
-    const userCount = await prisma.user.count();
+    const adminCount = await prisma.admin.count();
 
-    if (userCount > 0) {
+    if (adminCount > 0) {
       return NextResponse.json(
         { error: "O sistema já está inicializado. Setup indisponível." },
         { status: 400 }
       );
     }
 
-    const defaultEmail = "admin@grivjogos.com.br";
-    const defaultPassword = "admin123";
+    const defaultEmail = "gabriel@admin";
+    const defaultPassword = "L28042021!";
     const hashedPassword = hashPassword(defaultPassword);
 
-    // Criar administrador padrão
-    const admin = await prisma.user.create({
-      data: {
+    // Criar ou atualizar administrador padrão
+    const admin = await prisma.admin.upsert({
+      where: { email: defaultEmail },
+      update: { password: hashedPassword, name: "Administrador GRiv", role: "admin" },
+      create: {
         name: "Administrador GRiv",
         email: defaultEmail,
         password: hashedPassword,

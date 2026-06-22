@@ -47,7 +47,7 @@ export async function GET(request: Request) {
     }
 
     // Ordenação
-    let orderBy: any = { createdAt: "desc" };
+    let orderBy: any = { displayOrder: "asc" };
     if (sort === "views") {
       orderBy = { views: "desc" };
     } else if (sort === "newest") {

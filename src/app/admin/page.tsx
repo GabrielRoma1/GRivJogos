@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,6 +23,7 @@ interface Game {
   gameUrl: string | null;
   swfFile: string | null;
   views: number;
+  displayOrder: number;
   isActive: boolean;
   categoryId: string;
   category: {
@@ -66,6 +67,14 @@ export default function AdminPage() {
   const [newCategoryName, setNewCategoryName] = useState("");
   const [catError, setCatError] = useState("");
   const [catSuccess, setCatSuccess] = useState("");
+
+  // Estados de reordenação
+  const [reorderMode, setReorderMode] = useState(false);
+  const [reorderedGames, setReorderedGames] = useState<Game[]>([]);
+  const [reorderSaving, setReorderSaving] = useState(false);
+  const [reorderSuccess, setReorderSuccess] = useState("");
+  const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
 
   // 1. Verificar autenticação
   useEffect(() => {
@@ -313,6 +322,71 @@ export default function AdminPage() {
     }
   };
 
+  // === REORDENAÇÃO ===
+  const enterReorderMode = () => {
+    setReorderedGames([...games]);
+    setReorderMode(true);
+    setReorderSuccess("");
+  };
+
+  const exitReorderMode = () => {
+    setReorderMode(false);
+    setReorderedGames([]);
+    setDraggedIndex(null);
+    setDragOverIndex(null);
+  };
+
+  const moveGame = (fromIndex: number, toIndex: number) => {
+    if (toIndex < 0 || toIndex >= reorderedGames.length) return;
+    const updated = [...reorderedGames];
+    const [moved] = updated.splice(fromIndex, 1);
+    updated.splice(toIndex, 0, moved);
+    setReorderedGames(updated);
+  };
+
+  // Drag and Drop handlers
+  const handleDragStart = (index: number) => {
+    setDraggedIndex(index);
+  };
+
+  const handleDragOver = (e: React.DragEvent, index: number) => {
+    e.preventDefault();
+    setDragOverIndex(index);
+  };
+
+  const handleDragEnd = () => {
+    if (draggedIndex !== null && dragOverIndex !== null && draggedIndex !== dragOverIndex) {
+      moveGame(draggedIndex, dragOverIndex);
+    }
+    setDraggedIndex(null);
+    setDragOverIndex(null);
+  };
+
+  const saveReorder = async () => {
+    setReorderSaving(true);
+    setReorderSuccess("");
+    try {
+      const orderedIds = reorderedGames.map((g) => g.id);
+      const res = await fetch("/api/games/reorder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orderedIds }),
+      });
+      if (res.ok) {
+        setReorderSuccess("Ordem salva com sucesso! ✅");
+        setReorderMode(false);
+        loadDashboardData();
+      } else {
+        alert("Erro ao salvar a ordem dos jogos");
+      }
+    } catch (e) {
+      console.error(e);
+      alert("Erro de conexão ao salvar ordem");
+    } finally {
+      setReorderSaving(false);
+    }
+  };
+
   if (checkingAuth) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
@@ -447,11 +521,15 @@ export default function AdminPage() {
                   <input
                     type="text"
                     required
+                    maxLength={50}
                     value={gameTitle}
                     onChange={(e) => setGameTitle(e.target.value)}
                     placeholder="Ex: Super Mario Flash"
                     className="w-full bg-slate-950/60 border border-purple-900/50 rounded-xl py-2 px-3 focus:outline-none focus:border-pink-500 text-white text-sm"
                   />
+                  <p className={`text-[10px] mt-1 text-right ${gameTitle.length >= 40 ? (gameTitle.length >= 50 ? 'text-red-400' : 'text-yellow-400') : 'text-purple-400/60'}`}>
+                    {gameTitle.length}/50 caracteres
+                  </p>
                 </div>
 
                 <div>
@@ -475,11 +553,12 @@ export default function AdminPage() {
                   <label className="block text-xs font-semibold text-purple-300 uppercase mb-1">Descrição Curta *</label>
                   <textarea
                     required
-                    rows={3}
+                    rows={4}
                     value={gameDescription}
                     onChange={(e) => setGameDescription(e.target.value)}
                     placeholder="Escreva uma breve descrição..."
-                    className="w-full bg-slate-950/60 border border-purple-900/50 rounded-xl py-2 px-3 focus:outline-none focus:border-pink-500 text-white text-sm"
+                    className="w-full bg-slate-950/60 border border-purple-900/50 rounded-xl py-2 px-3 focus:outline-none focus:border-pink-500 text-white text-sm resize-y break-words whitespace-pre-wrap"
+                    style={{ overflowWrap: 'break-word', wordBreak: 'break-word' }}
                   />
                 </div>
 
@@ -655,11 +734,15 @@ export default function AdminPage() {
                 <input
                   type="text"
                   required
+                  maxLength={20}
                   placeholder="Nome da categoria"
                   value={newCategoryName}
                   onChange={(e) => setNewCategoryName(e.target.value)}
                   className="w-full bg-slate-950/60 border border-purple-900/50 rounded-xl py-2 px-3 focus:outline-none focus:border-pink-500 text-white text-sm"
                 />
+                <p className={`text-[10px] mt-1 text-right ${newCategoryName.length >= 16 ? (newCategoryName.length >= 20 ? 'text-red-400' : 'text-yellow-400') : 'text-purple-400/60'}`}>
+                  {newCategoryName.length}/20 caracteres
+                </p>
               </div>
 
               {catError && <p className="text-xs text-red-400">{catError}</p>}
@@ -678,31 +761,92 @@ export default function AdminPage() {
 
         {/* Lado Direito: Listagem e Gerenciamento de Jogos Existentes */}
         <div className="lg:col-span-2 glass-panel p-6 rounded-2xl border border-purple-900/40 shadow-xl">
-          <h3 className="text-lg font-bold text-white mb-4 border-b border-purple-900/40 pb-2 flex justify-between items-center">
+          <h3 className="text-lg font-bold text-white mb-4 border-b border-purple-900/40 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
             <span>Todos os Jogos Cadastrados ({games.length})</span>
-            <span className="text-xs text-purple-400">Total de jogadas global</span>
+            <div className="flex items-center gap-2">
+              {reorderSuccess && (
+                <span className="text-xs text-green-400 font-medium animate-pulse">{reorderSuccess}</span>
+              )}
+              {!reorderMode ? (
+                <button
+                  onClick={enterReorderMode}
+                  disabled={games.length < 2}
+                  className="px-3 py-1.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:opacity-90 rounded-lg text-[10px] text-white font-bold transition-all disabled:opacity-30 shadow-lg shadow-amber-500/10 flex items-center gap-1"
+                >
+                  ↕️ Reordenar Jogos
+                </button>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={saveReorder}
+                    disabled={reorderSaving}
+                    className="px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 rounded-lg text-[10px] text-white font-bold transition-all disabled:opacity-50 shadow-lg shadow-green-500/10 flex items-center gap-1"
+                  >
+                    {reorderSaving ? "Salvando..." : "💾 Salvar Ordem"}
+                  </button>
+                  <button
+                    onClick={exitReorderMode}
+                    className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-purple-900/40 rounded-lg text-[10px] text-purple-300 font-bold transition-all"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              )}
+            </div>
           </h3>
 
+          {reorderMode && (
+            <div className="mb-4 px-3 py-2 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs text-amber-300 flex items-center gap-2">
+              <span>💡</span>
+              <span>Arraste as linhas ou use as setas ↑↓ para reordenar. Clique em <strong>"Salvar Ordem"</strong> para aplicar.</span>
+            </div>
+          )}
+
           <div className="overflow-x-auto">
-            {games.length === 0 ? (
+            {games.length === 0 && !reorderMode ? (
               <p className="text-purple-300 text-sm text-center py-8">Nenhum jogo cadastrado ainda.</p>
             ) : (
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-purple-900/40 text-purple-300/80">
+                    {reorderMode && <th className="py-2.5 font-bold uppercase tracking-wider text-center w-16">Ordem</th>}
                     <th className="py-2.5 font-bold uppercase tracking-wider">Jogo</th>
                     <th className="py-2.5 font-bold uppercase tracking-wider">Categoria</th>
                     <th className="py-2.5 font-bold uppercase tracking-wider">Tipo</th>
                     <th className="py-2.5 font-bold uppercase tracking-wider text-center">Jogadas</th>
                     <th className="py-2.5 font-bold uppercase tracking-wider text-center">Status</th>
-                    <th className="py-2.5 font-bold uppercase tracking-wider text-right">Ações</th>
+                    <th className="py-2.5 font-bold uppercase tracking-wider text-right">{reorderMode ? "Mover" : "Ações"}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-purple-950/40">
-                  {games.map((g) => (
-                    <tr key={g.id} className="hover:bg-purple-950/10 transition-colors">
+                  {(reorderMode ? reorderedGames : games).map((g, index) => (
+                    <tr
+                      key={g.id}
+                      draggable={reorderMode}
+                      onDragStart={() => reorderMode && handleDragStart(index)}
+                      onDragOver={(e) => reorderMode && handleDragOver(e, index)}
+                      onDragEnd={() => reorderMode && handleDragEnd()}
+                      className={`transition-all ${
+                        reorderMode
+                          ? `cursor-grab active:cursor-grabbing ${
+                              dragOverIndex === index
+                                ? "bg-amber-500/10 border-l-2 border-l-amber-500"
+                                : draggedIndex === index
+                                ? "opacity-40"
+                                : "hover:bg-purple-950/20"
+                            }`
+                          : "hover:bg-purple-950/10"
+                      }`}
+                    >
+                      {reorderMode && (
+                        <td className="py-3 text-center">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 font-bold text-[10px]">
+                            {index + 1}
+                          </span>
+                        </td>
+                      )}
                       <td className="py-3 flex items-center gap-3">
-                        <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-purple-900/30">
+                        <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-purple-900/30 flex-shrink-0">
                           <Image src={g.imageUrl} alt={g.title} fill className="object-cover" />
                         </div>
                         <span className="font-bold text-white">{g.title}</span>
@@ -717,19 +861,42 @@ export default function AdminPage() {
                           {g.isActive ? "Ativo" : "Inativo"}
                         </span>
                       </td>
-                      <td className="py-3 text-right space-x-2">
-                        <button
-                          onClick={() => startEditGame(g)}
-                          className="px-2 py-1 bg-purple-900 hover:bg-purple-800 rounded text-[10px] text-white font-semibold"
-                        >
-                          Editar
-                        </button>
-                        <button
-                          onClick={() => handleDeleteGame(g.id)}
-                          className="px-2 py-1 bg-red-950 hover:bg-red-900 border border-red-900/40 rounded text-[10px] text-red-300 font-semibold"
-                        >
-                          Excluir
-                        </button>
+                      <td className="py-3 text-right space-x-1">
+                        {reorderMode ? (
+                          <div className="flex items-center justify-end gap-1">
+                            <button
+                              onClick={() => moveGame(index, index - 1)}
+                              disabled={index === 0}
+                              className="w-7 h-7 flex items-center justify-center bg-purple-900 hover:bg-purple-800 rounded text-white font-bold disabled:opacity-20 disabled:cursor-not-allowed transition-all hover:scale-110"
+                              title="Mover para cima"
+                            >
+                              ↑
+                            </button>
+                            <button
+                              onClick={() => moveGame(index, index + 1)}
+                              disabled={index === reorderedGames.length - 1}
+                              className="w-7 h-7 flex items-center justify-center bg-purple-900 hover:bg-purple-800 rounded text-white font-bold disabled:opacity-20 disabled:cursor-not-allowed transition-all hover:scale-110"
+                              title="Mover para baixo"
+                            >
+                              ↓
+                            </button>
+                          </div>
+                        ) : (
+                          <>
+                            <button
+                              onClick={() => startEditGame(g)}
+                              className="px-2 py-1 bg-purple-900 hover:bg-purple-800 rounded text-[10px] text-white font-semibold"
+                            >
+                              Editar
+                            </button>
+                            <button
+                              onClick={() => handleDeleteGame(g.id)}
+                              className="px-2 py-1 bg-red-950 hover:bg-red-900 border border-red-900/40 rounded text-[10px] text-red-300 font-semibold"
+                            >
+                              Excluir
+                            </button>
+                          </>
+                        )}
                       </td>
                     </tr>
                   ))}
